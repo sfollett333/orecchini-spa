@@ -29,9 +29,6 @@
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Aggiungi' }">Aggiungi</RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'DettagliIndex' }">Dettagli</RouterLink>
-          </li>
         </ul>
       </div>
     </div>
