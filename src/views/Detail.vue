@@ -95,7 +95,7 @@ export default {
     }
   },
   watch: {
-    // Ogni volta che cambia il prodotto visualizzato, salviamo l'id nello store
+    // Ogni volta che cambia il prodotto visualizzato, salvo l'id nello store
     product: {
       handler(p) {
         if (p?.id) this.$store.commit('SET_LAST_VIEWED', p.id)

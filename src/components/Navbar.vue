@@ -1,5 +1,5 @@
 <template>
-  <!-- Navbar Bootstrap con 4 voci richieste: Home, Prodotti, Aggiungi, Dettagli -->
+  <!-- Navbar Bootstrap 4 voci: Home, Prodotti, Aggiungi, Dettagli -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
     <div class="container">
       <RouterLink class="navbar-brand fw-bold" :to="{ name: 'Home' }">
@@ -30,11 +30,9 @@
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Aggiungi' }">Aggiungi</RouterLink>
           </li>
           <li class="nav-item">
-            <!-- “Dettagli” senza id: la view cercherà l'ultimo prodotto visto oppure guiderà l'utente -->
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'DettagliIndex' }">Dettagli</RouterLink>
           </li>
         </ul>
-        <!-- Qui puoi aggiungere altri elementi a destra se vuoi -->
       </div>
     </div>
   </nav>

@@ -2,7 +2,7 @@
   <!--
     Pagina “Aggiungi” contiene la componente ProductForm. E' un form costruito con
     Bootstrap e che permette di inserire un nuovo prodotto.
-    Al submit, creiamo un nuovo prodotto e lo salviamo nello store.
+    Al submit, si crea un nuovo prodotto e si salva nello store.
   -->
   <section>
     <h1 class="h4 mb-3">Aggiungi un nuovo prodotto</h1>

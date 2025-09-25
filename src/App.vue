@@ -1,7 +1,6 @@
 <template>
-  <!-- ⚠️ Un SOLO root element: questo <div> -->
+  <!-- Un SOLO root element: questo <div> -->
   <div>
-    <!-- Navbar in alto -->
     <Navbar />
 
     <!-- Contenuto pagine -->
@@ -54,7 +53,6 @@ export default {
 </script>
 
 <style scoped>
-/* Colore di brand (se vuoi uniformare i toni del footer) */
 :root { --brand: #4f46e5; }
 
 footer a:hover {

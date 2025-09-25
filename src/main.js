@@ -1,9 +1,6 @@
 // main.js
 // ---------------------------------------------
 // Inizializza l'app Vue 3, collega router e store (Vuex) e importa Bootstrap.
-// Usiamo il bundle JS di Bootstrap (include Popper) + i CSS.
-// Così otteniamo componenti pronti come il Carousel usato nella Home.
-
 
 import { createApp } from 'vue'
 import App from './App.vue'

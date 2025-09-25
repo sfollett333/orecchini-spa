@@ -2,7 +2,6 @@
 <!--
 Card prodotto riutilizzabile.
 Mostra immagine, nome, prezzo, tag, disponibilità e un pulsante Dettagli.
-Dimostra: props, computed, event binding, conditional rendering.
 -->
  <div class="card h-100 shadow-sm">
   <img v-if="cover" :src="cover" class="card-img-top" :alt="product.name" />

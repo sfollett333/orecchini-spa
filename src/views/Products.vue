@@ -1,8 +1,6 @@
 <template>
   <!--
-    Pagina elenco prodotti (master della vista master/detail).
-    Include barra di ricerca (requisito “form di ricerca”),
-    griglia responsive >= 2 colonne con Bootstrap, e azioni.
+    Pagina elenco prodotti (master/detail).
   -->
   <section>
     <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-3 gap-2">

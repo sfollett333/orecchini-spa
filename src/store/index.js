@@ -1,12 +1,6 @@
 // store/index.js (Vuex)
 // -------------------------------------------------------
-// Questo store simula un “database” come richiesto.
-// I dati sono mantenuti in state.products e persistiti su localStorage
-// così, ricaricando la pagina, non perdi quello che hai inserito.
-//
-// Dimostriamo: state, getters, mutations, actions (anche async fittizie)
-// e l'uso in componenti tramite mapState/mapGetters o this.$store.
-
+// Questo store simula un “database”.
 
 import { createStore } from 'vuex'
 
@@ -97,7 +91,7 @@ export default createStore({
 getters: {
  allProducts: (state) => state.products,
  byId: (state) => (id) => state.products.find(p => p.id === id) || null,
- featured: (state) => state.products.slice(0, 3), // per la Home/Carousel
+ featured: (state) => state.products.slice(0, 3), //
  // Ricerca semplice per nome, tag e materiali
  search: (state) => (q) => {
   if (!q) return state.products

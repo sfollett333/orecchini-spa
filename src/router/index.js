@@ -1,8 +1,8 @@
 // router/index.js
 // -------------------------------------------------------
-// Configura il routing SPA con 4 voci principali richieste dalla consegna:
+// Configura il routing SPA con 4 voci:
 // Home (/), Prodotti (/prodotti), Aggiungi (/aggiungi) e Dettagli (/dettagli/:id).
-// In Navbar colleghiamo /dettagli senza id per mostrare un “selettore” o
+// In Navbar collego /dettagli senza id per mostrare un “selettore” o
 // l'ultimo prodotto visualizzato (usando lo store).
 
 
@@ -17,7 +17,7 @@ const routes = [
 { path: '/', name: 'Home', component: Home },
 { path: '/prodotti', name: 'Prodotti', component: Products },
 { path: '/aggiungi', name: 'Aggiungi', component: Add },
-// Rotta dettagli “con id” (master/detail della consegna)
+// Rotta dettagli “con id” (master/detail)
 { path: '/dettagli/:id', name: 'Dettagli', component: Detail, props: true },
 // Rotta “/dettagli” senza id: reindirizza all'ultimo visto oppure mostra una guida
 { path: '/dettagli', name: 'DettagliIndex', component: Detail, props: route => ({ id: null }) },
