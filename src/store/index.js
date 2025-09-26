@@ -40,7 +40,9 @@ const seedProducts = [
    inStock: true,
    rating: 4.7,
    tags: ['eleganti', 'nichel-free', 'argento'],
-   images: [ '/images/Orecchini1.webp']
+   images: [ '/images/Orecchini1.webp',
+    '/images/Orecchini1ragazza.png'
+   ]
 },
 {
    id: 'E-0002',
@@ -52,7 +54,9 @@ const seedProducts = [
   inStock: true,
   rating: 4.4,
   tags: ['cerchi', 'oro', 'classico'],
-  images: ['/images/Orecchini2.webp']
+  images: ['/images/Orecchini2.webp',
+    '/images/Orecchini2ragazza.png'
+  ]
 },
 {
   id: 'E-0003',
@@ -64,7 +68,9 @@ const seedProducts = [
   inStock: false,
   rating: 4.9,
   tags: ['perle', 'casual', 'colorati'],
-  images: ['/images/Orecchini3.webp']
+  images: ['/images/Orecchini3.webp',
+    '/images/Orecchini3ragazza.png'
+  ]
 },
 {
   id: 'E-0004',
@@ -76,7 +82,9 @@ const seedProducts = [
   inStock: true,
   rating: 4.2,
   tags: ['lusso', 'placcato oro', 'eleganti'],
-  images: ['/images/Orecchini4.webp']
+  images: ['/images/Orecchini4.webp',
+    '/images/Orecchini4ragazza.png'
+  ]
 }
 ]
 

@@ -1,29 +1,70 @@
 <template>
   <section v-if="product" class="row g-4">
-    <!-- Colonna immagini -->
-    <div class="col-12 col-lg-6">
-      <div v-if="product.images?.length">
+    <!-- COLONNA IMMAGINI (Detail.vue) -->
+<div class="col-12 col-lg-6">
+  <div
+    v-if="product?.images?.length"
+    :id="`carousel-${product.id}`"
+    class="carousel slide mb-3"
+    data-bs-ride="carousel"
+  >
+    <!-- Indicatori -->
+    <div class="carousel-indicators">
+      <button
+        v-for="(img, idx) in product.images"
+        :key="`ind-${idx}`"
+        type="button"
+        :data-bs-target="`#carousel-${product.id}`"
+        :data-bs-slide-to="idx"
+        :class="{ active: idx === 0 }"
+        :aria-current="idx === 0 ? 'true' : undefined"
+        :aria-label="`Slide ${idx + 1}`"
+      ></button>
+    </div>
+
+    <!-- Slide -->
+    <div class="carousel-inner ratio ratio-4x3 rounded overflow-hidden">
+      <div
+        v-for="(img, idx) in product.images"
+        :key="img"
+        class="carousel-item"
+        :class="{ active: idx === 0 }"
+      >
         <img
-          :src="product.images[activeImg]"
-          :alt="product.name"
-          class="w-100 h-100"
+          :src="img"
+          class="d-block w-100 h-100"
           style="object-fit: cover;"
+          :alt="`${product.name} – foto ${idx + 1}`"
         />
-        <div class="d-flex gap-2 mt-2 flex-wrap">
-          <button
-            v-for="(img, idx) in product.images"
-            :key="img"
-            class="btn btn-outline-secondary btn-sm"
-            :class="{ active: idx === activeImg }"
-            @click="activeImg = idx"
-          >
-          </button>
-        </div>
-      </div>
-      <div v-else class="bg-light rounded p-5 text-center text-muted">
-        Nessuna immagine
       </div>
     </div>
+
+    <!-- Controlli -->
+    <button
+      class="carousel-control-prev"
+      type="button"
+      :data-bs-target="`#carousel-${product.id}`"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      :data-bs-target="`#carousel-${product.id}`"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div v-else class="bg-light rounded p-5 text-center text-muted">
+    Nessuna immagine
+  </div>
+</div>
+
 
     <!-- Colonna info -->
     <div class="col-12 col-lg-6">
